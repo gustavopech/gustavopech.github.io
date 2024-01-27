@@ -29,17 +29,19 @@
     </form>
 
     <script>
-        function submitForm() {
-            // Get form data
-            var currentScore = document.getElementById('current_score').value;
-            var surveyCount = document.getElementById('survey_count').value;
+        document.addEventListener('DOMContentLoaded', function () {
+            function submitForm() {
+                // Get form data
+                var currentScore = document.getElementById('current_score').value;
+                var surveyCount = document.getElementById('survey_count').value;
 
-            // Process the input
-            var resultMessage = 'Submitted Current Score: ' + currentScore + ', Survey Count: ' + surveyCount;
+                // Process the input
+                var resultMessage = 'Submitted Current Score: ' + currentScore + ', Survey Count: ' + surveyCount;
 
-            // Display the result
-            document.getElementById('result').textContent = resultMessage;
-        }
+                // Display the result
+                document.getElementById('result').textContent = resultMessage;
+            }
+        });
     </script>
 
     <!-- ... (rest of your HTML code) ... -->
