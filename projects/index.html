@@ -36,12 +36,13 @@
             var surveyCount = document.getElementById('survey_count').value;
             var totalCount;
             // Process the input
-            var resultMessage = 'Submitted Current Score: ' + currentScore + ', Survey Count: ' + surveyCount;
+            
             for (let loopCount = 0; currentScore > targetScore; loopCount++) {
                totalCount = loopCount + surveyCount;
                currentScore = (currentScore+100)/totalCount+1;
             }
             // Display the result
+            var resultMessage = 'Submitted Current Score: ' + currentScore + ', Survey Count: ' + surveyCount +'amount needed'+loopCount;
             document.getElementById('result').textContent = resultMessage;
         }
 
