@@ -35,37 +35,63 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-<form>
-    <div class="form-group">
-      <label for="exampleFormControlInput1">Email address</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect2">Example multiple select</label>
-      <select multiple class="form-control" id="exampleFormControlSelect2">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlTextarea1">Example textarea</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
-  </form>
-  
+<form id="myForm" action="/submit" method="post">
+    <!-- Text Input -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
 
+    <br>
 
+    <!-- Email Input -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <br>
+
+    <!-- Password Input -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <br>
+
+    <!-- Radio Buttons -->
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+
+    <br>
+
+    <!-- Checkbox -->
+    <input type="checkbox" id="subscribe" name="subscribe" value="subscribe">
+    <label for="subscribe">Subscribe to newsletter</label>
+
+    <br>
+
+    <!-- Submit Button -->
+    <input type="button" value="Submit" onclick="submitForm()">
+</form>
+
+<script>
+    function submitForm() {
+        // Get form data
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var gender = document.querySelector('input[name="gender"]:checked');
+        var subscribe = document.getElementById('subscribe').checked;
+
+        // Process the data (you can replace this with your own logic)
+        console.log('Name:', name);
+        console.log('Email:', email);
+        console.log('Password:', password);
+        console.log('Gender:', gender ? gender.value : 'Not specified');
+        console.log('Subscribe:', subscribe ? 'Yes' : 'No');
+
+        // Add any additional logic or data submission code here
+    }
+</script>
+
+</body>
 </html>
