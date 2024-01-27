@@ -29,18 +29,22 @@
     </form>
 
     <script>
+        // Define the submitForm function outside the event listener
+        function submitForm() {
+            // Get form data
+            var currentScore = document.getElementById('current_score').value;
+            var surveyCount = document.getElementById('survey_count').value;
+
+            // Process the input
+            var resultMessage = 'Submitted Current Score: ' + currentScore + ', Survey Count: ' + surveyCount;
+
+            // Display the result
+            document.getElementById('result').textContent = resultMessage;
+        }
+
+        // Use the DOMContentLoaded event listener to ensure the script runs after the DOM is fully loaded
         document.addEventListener('DOMContentLoaded', function () {
-            function submitForm() {
-                // Get form data
-                var currentScore = document.getElementById('current_score').value;
-                var surveyCount = document.getElementById('survey_count').value;
-
-                // Process the input
-                var resultMessage = 'Submitted Current Score: ' + currentScore + ', Survey Count: ' + surveyCount;
-
-                // Display the result
-                document.getElementById('result').textContent = resultMessage;
-            }
+            // The script is now correctly placed, and submitForm should be defined here
         });
     </script>
 
