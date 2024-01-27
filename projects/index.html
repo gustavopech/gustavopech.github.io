@@ -2,74 +2,48 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Your head content here -->
 
-  <title>Gustavo Pech Portfolio</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: MyResume
-  * Updated: Nov 17 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <title>Gustavo Pech Portfolio</title>
+    <!-- ... (other meta tags and links) ... -->
 </head>
-<form id="myForm" action="/submit" method="post">
-    <!-- Current Score Input -->
-    <label for="current_score">Current Score:</label>
-    <input type="number" id="current_score" name="current_score" required>
 
-    <br>
+<body>
 
-    <!-- Email Input -->
-    <label for="survey_count">Survey Count:</label>
-    <input type="number" id="survey_count" name="survey_count" required>
+    <form id="myForm" action="/submit" method="post">
+        <!-- Current Score Input -->
+        <label for="current_score">Current Score:</label>
+        <input type="number" id="current_score" name="current_score" required>
 
-    <br>
+        <br>
 
+        <!-- Survey Count Input -->
+        <label for="survey_count">Survey Count:</label>
+        <input type="number" id="survey_count" name="survey_count" required>
 
+        <br>
 
-    <!-- Submit Button -->
-    <input type="button" value="Submit" onclick="submitForm()">
-    <h1 id="result"></h1>
-</form>
+        <!-- Submit Button -->
+        <input type="button" value="Submit" onclick="submitForm()">
+        <h1 id="result"></h1>
+    </form>
 
-<script>
-    function submitForm() {
-        // Get form data
-        var currentScore = document.getElementById('current_score').value;
-        var email = document.getElementById('email').value;
+    <script>
+        function submitForm() {
+            // Get form data
+            var currentScore = document.getElementById('current_score').value;
+            var surveyCount = document.getElementById('survey_count').value;
 
-       
-        // Process the double input
-        var resultMessage = 'Submitted Double: ' + currentScore;
+            // Process the input
+            var resultMessage = 'Submitted Current Score: ' + currentScore + ', Survey Count: ' + surveyCount;
 
-        // Display the result
-        document.getElementById('result').textContent = resultMessage;
+            // Display the result
+            document.getElementById('result').textContent = resultMessage;
+        }
+    </script>
 
-    }
-</script>
+    <!-- ... (rest of your HTML code) ... -->
 
 </body>
+
 </html>
