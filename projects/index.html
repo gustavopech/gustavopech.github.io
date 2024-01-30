@@ -39,12 +39,13 @@
             var currentScore = document.getElementById('current_score').value;
             var surveyCount = document.getElementById('survey_count').value;
             var targetScore = document.getElementById('target_score').value;
-            var totalCount;
+            var tempCount;
+            var loopCount = 0;
             // Process the input
             
-            for (let loopCount = 0; currentScore > targetScore; loopCount++) {
-               totalCount = loopCount + surveyCount;
-               currentScore = (currentScore+100)/totalCount+1;
+            for (let loopCount = 1; currentScore > targetScore; loopCount++) {
+               tempCount = loopCount + surveyCount;
+               currentScore = (currentScore+100)/totalCount;
             }
             // Display the result
             var resultMessage = 'Submitted Current Score: ' + currentScore + ', Survey Count: ' + surveyCount +'amount needed'+loopCount;
